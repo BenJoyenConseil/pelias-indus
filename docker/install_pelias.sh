@@ -14,13 +14,6 @@ source /opt/rh/devtoolset-3/enable
 ## API
 git clone https://github.com/pelias/api.git && cd api
 
-### apply source PATCH
-rm query/search_defaults.js
-rm query/text_parser.js
-mv /patch/search_defaults.js query/
-mv /patch/text_parser.js query/
-
-## end PATCH
 /usr/bin/npm install	
 mkdir /root/tarball
 cd /home/node/api

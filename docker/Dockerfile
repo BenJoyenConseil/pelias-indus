@@ -16,7 +16,6 @@ RUN chmod +x /install_nodejs.sh
 RUN /install_nodejs.sh
 
 VOLUME ["/root/rpmbuild/RPMS" "/home/libpostal/data", "/root/tarball"]
-COPY ./build.sh /usr/bin/build
-COPY patch /patch
+COPY ./install_pelias.sh /usr/bin/build
 
 CMD ["build"]
