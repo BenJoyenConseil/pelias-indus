@@ -1,4 +1,6 @@
 #!/bin/bash
+
+## LibPostal
 wget https://github.com/openvenues/libpostal/archive/master.zip
 mv master.zip /root/rpmbuild/SOURCES/
 
@@ -13,12 +15,13 @@ source /opt/rh/devtoolset-3/enable
 
 ## API
 git clone https://github.com/pelias/api.git && cd api
+git checkout $1
 
 /usr/bin/npm install	
 mkdir /root/tarball
 cd /home/node/api
-tar -zcvf pelias-api.tar.gz *
-mv pelias-api.tar.gz /root/tarball/
+tar -zcvf pelias-api-$1.tar.gz *
+mv pelias-api-$1.tar.gz /root/tarball/
 rm -rf /home/node/api/
 
 ## OpenStreetMap
