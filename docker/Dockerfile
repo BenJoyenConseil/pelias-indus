@@ -18,4 +18,4 @@ RUN /install_nodejs.sh
 VOLUME ["/root/rpmbuild/RPMS" "/home/libpostal/data", "/root/tarball"]
 COPY ./install_pelias.sh /usr/bin/build
 
-CMD ["build", "v3.3.0"]
+CMD ["build", "v3.15.0"]

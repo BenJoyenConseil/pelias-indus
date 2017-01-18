@@ -1,13 +1,11 @@
 #!/bin/bash
 
 ## LibPostal
-wget https://github.com/openvenues/libpostal/archive/master.zip
-mv master.zip /root/rpmbuild/SOURCES/
+wget  https://github.com/openvenues/libpostal/archive/v0.3.3.zip
+mv v0.3.3.zip /root/rpmbuild/SOURCES/
 
 rpmbuild -ba /root/rpmbuild/SPECS/postal-rpmbuild.spec
-yum install -y --nogpgcheck \
-        /root/rpmbuild/RPMS/x86_64/libpostal-master*.rpm \
-        /root/rpmbuild/RPMS/x86_64/libpostal-devel-*.rpm
+yum install -y --nogpgcheck /root/rpmbuild/RPMS/x86_64/libpostal-*.rpm
 
 mkdir -p /home/node/
 cd /home/node/
@@ -42,3 +40,9 @@ git clone https://github.com/pelias/geonames.git && cd geonames
 cd /home/node/
 tar -zcvf osm-importer.tar.gz *
 mv osm-importer.tar.gz /root/tarball/
+
+echo "#######################################"
+echo "#                                     #"
+echo "#    Pelias $1 ready to run !          "
+echo "#                                     #"
+echo "#######################################"

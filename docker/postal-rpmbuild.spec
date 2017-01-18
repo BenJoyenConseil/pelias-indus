@@ -1,12 +1,12 @@
 Name:           libpostal
-Version:        master
-Release:        0.3%{?dist}
+Version:        0.3.3
+Release:        ulaanbaatar%{?dist}
 Summary:        Nothing to say
 
 Group:          System Environment/Libraries
 License:        MIT
 URL:            https://github.com/openvenues/libpostal
-Source0:        https://github.com/openvenues/libpostal/archive/master.zip
+Source0:        https://github.com/openvenues/libpostal/archive/v0.3.3.zip
 
 BuildRequires:  snappy,snappy-devel,autoconf,automake,libtool,pkgconfig,tar
 
